@@ -20,7 +20,7 @@ Python was used to load the raw 308K-row CSV into a local SQLite database after 
 
 - **Granularity:** One row = one inspection event
 - **Source:** City of Chicago Open Data Portal — Food Inspections
-- **URL:** [data.cityofchicago.org/Health-Human-Services/Food-Inspections/4dn7-eekw](https://data.cityofchicago.org/Health-Human-Services/Food-Inspections/4dn7-eekw)
+- **URL:** https://data.cityofchicago.org/Health-Human-Services/Food-Inspections/4ijn-s7e5/about_data 
 - **Time Period:** January 1, 2010 – April 2026
 - **Total Records:** 308,357
 - **License:** Public Domain
