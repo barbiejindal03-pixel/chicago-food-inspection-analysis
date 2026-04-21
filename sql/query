@@ -1,0 +1,57 @@
+/*COUNT TOTAL ROWS*/ 
+SELECT COUNT(*) AS total_rows
+FROM inspections;
+
+/*COUNT TOTAL COLUMNS*/ 
+SELECT COUNT(*) AS total_columns
+FROM pragma_table_info('inspections');
+
+/*SEE ALL COLUMN NAMES*/
+PRAGMA table_info('inspections');
+
+/*PREVIEW THE DATA*/
+SELECT *
+FROM inspections
+LIMIT 10;
+
+/*COUNT PASS VS FAIL*/
+-- How many restaurants passed vs failed?
+SELECT 
+    results,
+    COUNT(*) AS total
+FROM inspections
+GROUP BY results
+ORDER BY total DESC;
+
+/*STEP 6: COUNT BY RISK LEVEL*/
+SELECT 
+    risk,
+    COUNT(*) AS total
+FROM inspections
+GROUP BY risk
+ORDER BY total DESC;
+
+/*FAIL RATE BY ZIP CODE*/ 
+SELECT 
+    zip,
+    COUNT(*) AS total_inspections,
+    SUM(CASE WHEN results = 'Fail' THEN 1 ELSE 0 END) AS total_fails,
+    ROUND(100.0 * SUM(CASE WHEN results = 'Fail' THEN 1 ELSE 0 END) / COUNT(*), 2) AS fail_rate_percent
+FROM inspections
+WHERE zip != ''
+GROUP BY zip
+ORDER BY fail_rate_percent DESC
+LIMIT 15;
+
+/*REPEAT OFFENDERS*/
+SELECT 
+    dba_name,
+    address,
+    zip,
+    COUNT(*) AS times_failed
+FROM inspections
+WHERE results = 'Fail'
+GROUP BY license_num
+HAVING times_failed > 1
+ORDER BY times_failed DESC
+LIMIT 15;
