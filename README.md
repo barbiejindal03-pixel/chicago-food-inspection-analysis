@@ -38,8 +38,6 @@ Python was used to load the raw 308K-row CSV into a local SQLite database after 
 | `results` | Outcome — Pass, Fail, Pass w/ Conditions, No Entry, etc. |
 | `violations` | Text description of violations found during inspection |
 
----
-
 ## Key Findings
 
 - **1 in 5 restaurants fails inspection.** Of 308,357 inspections, 59,453 resulted in Fail — an overall fail rate of 19.28%. This rate has stayed near 19–21% every single year for 16 years, indicating a systemic problem, not isolated incidents.
@@ -50,8 +48,6 @@ Python was used to load the raw 308K-row CSV into a local SQLite database after 
 
 - **"Pass" does not always mean safe.** A "Pass with Conditions" allows a restaurant to stay open despite active violations, with no guaranteed follow-up re-inspection. The "Others" category (29% of all records) includes No Entry, Out of Business, Not Ready, and Business Not Located — meaning nearly 1 in 3 scheduled inspections produces no clean outcome either way.
 
----
-
 ## Skills Demonstrated
 
 - Data acquisition from a public government open data portal (308K rows)
@@ -61,8 +57,6 @@ Python was used to load the raw 308K-row CSV into a local SQLite database after 
 - Geographic failure rate analysis by ZIP code
 - Risk-level segmentation using categorical filtering
 - End-to-end analytics pipeline: raw CSV → SQLite → SQL analysis → Tableau dashboard
-
----
 
 ## Results Summary
 
@@ -77,8 +71,6 @@ Python was used to load the raw 308K-row CSV into a local SQLite database after 
 | Top repeat offender | Subway (210 failures in Chicago) |
 | Top 5 chains combined | 591 failures |
 | Restaurants per inspector | ~470 (only ~36 inspectors citywide) |
-
----
 
 ## Query Results
 
@@ -95,7 +87,6 @@ All SQL query outputs are exported as CSV files and viewable directly in GitHub:
 | 7 | Fail rate by ZIP code | [View Result](data/FAIL_RATE_BY_ZIP_CODE_SELECT_zip_COUNT_AS_total_inspecti_202604090022.csv) |
 | 8 | Repeat offenders | [View Result](data/REPEAT_OFFENDERS_SELECT_dba_name_address_zip_COUNT_AS_ti_202604090022.csv) |
 
----
 
 ## LinkedIn Carousel
 
@@ -107,8 +98,6 @@ The full project story is summarized in a 6-slide data carousel:
 ![Slide 4](assets/slides/Slide4.png)
 ![Slide 5](assets/slides/Slide5.png)
 ![Slide 6](assets/slides/Slide6.png)
-
----
 
 ## SQL Analysis
 
