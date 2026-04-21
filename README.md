@@ -120,6 +120,9 @@ Python data loading script:
 4. Run all 8 queries from `sql/queries.sql`
 5. View the live Tableau dashboard: [Tableau Public](https://public.tableau.com/app/profile/barbie.jindal4061/viz/chicago_food/Dashboard1)
 
+---
+**key note** - kindly copy the link for the portal and then look for it, the website may refrain for direct access via this project. 
+ 
 **Barbie Jindal** — MBA, Business Analytics, Illinois Institute of Technology
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/barbiejindal)
